@@ -3,28 +3,28 @@ using namespace std;         //example: arr = {1,2,3,4,5};
 
 const int Max = 5;
 //Optional function to sort array if user enters unsorted, otherwise user is bound to enter sorted values
-void sortArray(int tempArr[Max]){
+void sortArray(int arr[Max]){
     int i, j, temp;
     for(i=0;i<=Max-1;i++){
         for(j=i+1;j<=Max-1;j++){
-            if(tempArr[i] > tempArr[j]){
-                temp = tempArr[i];
-                tempArr[i] = tempArr[j];
-                tempArr[j] = temp;
+            if(arr[i] > arr[j]){
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }
 }
 
-void binarysearch(int temparr[Max], int tempnumtoFind){
+void binarysearch(int arr[Max], int tempnumtoFind){
     int lower = 0, upper = Max - 1, mid = 0, flag = 1;
     for(mid=(lower+upper)/2;lower<=upper;mid=(lower+upper)/2){
-        if(temparr[mid] == tempnumtoFind){
+        if(arr[mid] == tempnumtoFind){
             cout<<"Number "<<tempnumtoFind<<" is located at "<<mid<<" index in the array."<<endl;
             flag = 0;
             break;
         }
-        else if(tempnumtoFind > temparr[mid]){   //{2, 4 ,6 ,8 ,10}
+        else if(tempnumtoFind > arr[mid]){   //{2, 4 ,6 ,8 ,10}
             lower = mid + 1; //since array is in order, if the num to find is less than the num at the
         }                    //arr[mid] location, then it means that the num to find is after the arr[mid].
         else{
