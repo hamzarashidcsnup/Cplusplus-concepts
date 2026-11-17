@@ -30,13 +30,12 @@ void linklist::append(int num){
     }
     else{
         temp = p;
-        while(temp->link != NULL){
+        while(temp->link != NULL)
             temp = temp->link;
-        }
-            r = new node;
-            r->data = num;
-            r->link = NULL;
-            temp->link = r;
+        r = new node;
+        r->data = num;
+        r->link = NULL;
+        temp->link = r;
     }
 }
 
@@ -53,11 +52,9 @@ void linklist::addafter(int loc, int num){
     temp = p;
     for(int i=0;i<loc-1;i++){
         temp = temp->link;
-        if(temp == NULL){
-        cout<<"There are less than "<<loc<<" elements."<<endl;
-        }
+        if(temp == NULL)
+            cout<<"There are less than "<<loc<<" elements."<<endl;
     }
-
     r = new node;
     r->data = num;
     r->link = temp->link; 
@@ -131,7 +128,7 @@ int main(){
                     do{
                         cout<<"Do you want to add a number at the beginning? ";
                         cin>>user_choice;
-                        if(user_choice == "yes" || user_choice == "Yes" || user_choice == "YES"){
+                        if(user_choice == "yes" || user_choice == "Yes" || user_choice == "YES" || "Y" || "y"){
                             int num_to_add_at_beginning;
                             cout<<"Enter the number you want to add at the beginning: ";
                             cin>>num_to_add_at_beginning;

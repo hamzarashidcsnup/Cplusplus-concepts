@@ -25,7 +25,7 @@ void binarysearch(int arr[Max], int tempnumtoFind){
             break;
         }
         else if(tempnumtoFind > arr[mid]){   //{2, 4 ,6 ,8 ,10}
-            lower = mid + 1; //since array is in order, if the num to find is less than the num at the
+            lower = mid + 1; //since array is in order, if the num to find is greater than the num at the
         }                    //arr[mid] location, then it means that the num to find is after the arr[mid].
         else{
             upper = mid - 1;

@@ -3,7 +3,7 @@ using namespace std;
 
 const int SIZE = 5;
 
-void InsertSortingDescending(int arr[SIZE]){
+void InsertionSortingDescending(int arr[SIZE]){
     int i, j, k, temp;
     for(i=1;i<SIZE;i++){
         for(j=0;j<i;j++){
@@ -23,7 +23,7 @@ void InsertSortingDescending(int arr[SIZE]){
     }
 }
 
-void InsertSortingAscending(int arr[SIZE]){
+void InsertionSortingAscending(int arr[SIZE]){
     int i, j, k, temp;
     for(i=1;i<SIZE;i++){
         for(j=0;j<i;j++){
@@ -53,7 +53,7 @@ int main(){
     for(i=0;i<SIZE;i++){
         cout<<arr[i]<<endl;
     }
-    InsertSortingAscending(arr);
-    InsertSortingDescending(arr);
+    InsertionSortingAscending(arr);
+    InsertionSortingDescending(arr);
     return 0;
 }

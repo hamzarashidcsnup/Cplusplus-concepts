@@ -126,4 +126,5 @@ int main(){
                     break;
         }
     }while(user_choice != 6);
+    return 0;
 }

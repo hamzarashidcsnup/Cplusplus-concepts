@@ -61,8 +61,8 @@ void quicksortAscending(int arr[SIZE], int lower, int upper){
 void quicksortDescending(int arr[SIZE], int lower, int upper){
     if(lower < upper){
         int i = splitDescending(arr, lower, upper);
-    quicksortDescending(arr, lower, i-1);
-    quicksortDescending(arr, i+1, upper);
+        quicksortDescending(arr, lower, i-1);
+        quicksortDescending(arr, i+1, upper);
     }
 }
 
